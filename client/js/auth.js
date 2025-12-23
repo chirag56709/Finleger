@@ -1,3 +1,4 @@
+const API_URL = "https://your-vercel-backend.vercel.app"; // yaha apna Vercel backend URL
 // Signup form
 const signupForm = document.getElementById("signupForm");
 if(signupForm) {

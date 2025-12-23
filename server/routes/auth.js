@@ -5,15 +5,17 @@ const bcrypt = require("bcryptjs");
 const authMiddleware = require("../middleware/auth");
 const nodemailer = require("nodemailer");
 const crypto = require("crypto");
+const { getMaxListeners } = require("events");
 const router = express.Router();
+require("dotenv").config(); // top of file
 
 // ================= Nodemailer Setup =================
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "cjcj42001@gmail.com", 
-    pass: "Almora@12345", 
-  }
+       user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_PASS,
+  },
 });
 
 // ================= SIGNUP =================
@@ -58,7 +60,7 @@ router.post("/login", async (req, res) => {
     if (!isMatch)
       return res.status(401).json({ message: "Invalid password" });
 
-    const token = jwt.sign({ id: user._id }, "finledgerSecret", { expiresIn: "1d" });
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1d" });
 
     res.json({ message: "Login successful", token });
   } catch (err) {
@@ -109,10 +111,10 @@ router.post("/forgot-password", async (req, res) => {
     user.resetTokenExpiry = Date.now() + 15 * 60 * 1000; // 15 min
     await user.save();
 
-    const resetLink = `http://localhost:3000/reset-password.html?token=${token}`;
+    const resetLink = `https://YOUR_FRONTEND_URL/reset-password.html?token=${token}`;
 
     await transporter.sendMail({
-      from: "FinLedger <finledger.project@gmail.com>",
+      from: `FinLedger <${process.env.EMAIL_USER}>`,
       to: user.email,
       subject: "Reset your FinLedger password",
       html: `
