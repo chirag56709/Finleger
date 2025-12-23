@@ -1,0 +1,471 @@
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #222;
+}
+
+/* ===============================
+   LANDING / INDEX PAGE
+================================ */
+.landing-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.landing-card {
+  background: #ffffff;
+  padding: 45px 35px;
+  border-radius: 14px;
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.landing-card h1 {
+  font-size: 34px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.landing-card p {
+  color: #555;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.landing-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.landing-buttons a {
+  text-decoration: none;
+  padding: 12px 26px;
+  border-radius: 30px;
+  background: #007bff;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.landing-buttons a:last-child {
+  background: #28a745;
+}
+
+.landing-buttons a:hover {
+  opacity: 0.9;
+}
+
+/* ===============================
+   AUTH PAGES
+================================ */
+/* ===============================
+   AUTH (LOGIN / SIGNUP)
+================================ */
+.auth-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2f7, #dbe7ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.auth-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 380px;
+  padding: 30px 28px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-card button:hover {
+  background: #0056b3;
+}
+
+.auth-card p {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.auth-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+/* ===============================
+   DASHBOARD LAYOUT
+================================ */
+body {
+  margin: 0;
+  background: #f4f6fb;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ---------- TOP BAR ---------- */
+.topbar {
+  height: 60px;
+  background: #0d1b2a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #e63939;
+}
+
+/* ---------- MAIN ---------- */
+.dashboard {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ---------- LEFT PANEL ---------- */
+.left-panel {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* SUMMARY CARDS */
+.summary-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.summary-card h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.summary-card p {
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.summary-card.highlight {
+  background: #0d6efd;
+  color: white;
+}
+
+/* ---------- COMMON CARD ---------- */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* INCOME INPUT */
+.card input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.card button {
+  width: 100%;
+  padding: 10px;
+  background: #0d6efd;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #084cdf;
+}
+
+.card .danger {
+  background: #dc3545;
+  margin-top: 8px;
+}
+
+.card .danger:hover {
+  background: #b02a37;
+}
+
+/* ---------- RIGHT PANEL ---------- */
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* EXPENSE FORM */
+#expenseForm input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* EXPENSE LIST */
+.expense-list {
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #f1f3f8;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+tr {
+  border-bottom: 1px solid #eee;
+}
+
+/* EDIT / DELETE BUTTONS */
+table button {
+  padding: 5px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #ffc107;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .summary-card {
+    width: 48%;
+  }
+}
+
+@media (max-width: 500px) {
+  .summary-card {
+    width: 100%;
+  }
+
+  .topbar {
+    padding: 0 15px;
+  }
+}
+/* ================= PROFILE PAGE ================= */
+
+.profile-body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Top bar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 30px;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.back-btn {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Center wrapper */
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Card */
+.profile-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+/* Avatar */
+.avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+  background: #2c5364;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 13px;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #2c5364;
+}
+
+/* Button */
+.primary-btn {
+  width: 100%;
+  padding: 12px;
+  background: #2c5364;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.primary-btn:hover {
+  background: #203a43;
+}
+
+.note {
+  font-size: 12px;
+  color: #888;
+  margin-top: 12px;
+}
