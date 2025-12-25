@@ -5,20 +5,16 @@ const authRoutes = require("./routes/auth");
 
 const app = express();
 
-// middleware
 app.use(cors());
 app.use(express.json());
 
-// routes
 app.use("/api/auth", authRoutes);
+
+connectDB();
 
 // test route
 app.get("/", (req, res) => {
   res.send("FinLedger API running");
 });
 
-// connect db (important)
-connectDB();
-
-// ❌ app.listen() HATA DO
 module.exports = app;
